@@ -1,9 +1,7 @@
 name: Gmail Research Digest
 
 on:
-  schedule:
-    - cron: '0 0 * * 1-6'   # 8 AM MYT (UTC+8) = 00:00 UTC, Mon–Sat
-  workflow_dispatch:          # manual trigger for testing
+  workflow_dispatch:          # triggered by Cloudflare Worker cron (Mon–Sat 8am MYT)
 
 jobs:
   digest:
